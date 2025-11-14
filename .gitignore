@@ -1,0 +1,12 @@
+# Ignore backup files
+backups/
+*.dump
+*.tar.gz
+
+# Ignore sensitive configuration
+.msmtprc
+*password*
+*secret*
+
+# Ignore system files
+.DS_Store
