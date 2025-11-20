@@ -1,0 +1,28 @@
+[2025-11-19 02:00:00] ==========================================
+[2025-11-19 02:00:00] Starting PostgreSQL Backup Process
+[2025-11-19 02:00:00] ==========================================
+[2025-11-19 02:00:00] Using psql: /usr/local/opt/postgresql@15/bin/psql
+[2025-11-19 02:00:00] Using pg_dump: /usr/local/opt/postgresql@15/bin/pg_dump
+[2025-11-19 02:00:00] Using msmtp: /usr/local/bin/msmtp
+[2025-11-19 02:00:00] Using rclone: /usr/local/bin/rclone
+[2025-11-19 02:00:01] Testing PostgreSQL connection...
+[2025-11-19 02:00:01] Pre-flight checks completed successfully
+[2025-11-19 02:00:01] Starting Task 1: Full Logical Backup
+[2025-11-19 02:00:01] Backup file: /Users/nespe/Laboratory Exercises/Lab8/backups/production_db_2025-11-19-020000.dump
+[2025-11-19 02:00:01] SUCCESS: Logical backup completed - Size:  12K
+[2025-11-19 02:00:01] Starting Task 2: Physical Base Backup
+[2025-11-19 02:00:01] Backup file: /Users/nespe/Laboratory Exercises/Lab8/backups/pg_base_backup_2025-11-19-020000.tar.gz
+[2025-11-19 02:00:01] Data directory: /usr/local/var/postgresql@15
+[2025-11-19 02:00:04] SUCCESS: Physical backup completed - Size: 7.1M
+[2025-11-19 02:00:04] All backup tasks completed successfully
+[2025-11-19 02:00:04] Starting cloud upload to Google Drive
+[2025-11-19 02:00:04] Uploading logical backup: production_db_2025-11-19-020000.dump
+2025/11/19 02:00:08 INFO  : production_db_2025-11-19-020000.dump: Copied (new)
+[2025-11-19 02:00:08] Uploading physical backup: pg_base_backup_2025-11-19-020000.tar.gz
+2025/11/19 02:00:21 INFO  : pg_base_backup_2025-11-19-020000.tar.gz: Copied (new)
+[2025-11-19 02:00:21] All backups uploaded successfully to Google Drive
+[2025-11-19 02:00:26] Starting local cleanup - removing backups older than 7 days
+[2025-11-19 02:00:26] No old backup files to remove
+[2025-11-19 02:00:26] ==========================================
+[2025-11-19 02:00:26] Backup Process Completed Successfully
+[2025-11-19 02:00:26] ==========================================
